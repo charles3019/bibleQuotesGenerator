@@ -1,4 +1,5 @@
-// bible quotes arrayobjects 
+/* A random Bible quote object with bibleVerse and quoteNumber properties.
+ **/
 var bibleQuotes = [
     { 
      bibleVerse: "But seek first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
@@ -40,12 +41,16 @@ var bibleQuotes = [
 ];
 
 
-// function to generate quotes 
+/**
+ * Generates a random Bible quote from the bibleQuotes array.
+ */
 const generateQuote = () => {
+    // Generate a random index within the range of the bibleQuotes array
     const randomQuotes = Math.floor(Math.random() * bibleQuotes.length)
+    // Return the Bible quote at the random index
     return bibleQuotes[randomQuotes]
 }
 
 
-
+// Log a random Bible quote to the console
 console.log(generateQuote())
